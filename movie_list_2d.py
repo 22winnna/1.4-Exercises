@@ -39,6 +39,13 @@ def delete(movie_list):
         movie = movie_list.pop(number-1)
         print(movie[0] + " was deleted.\n")
         
+def find(movie_list):
+    year_find = int(input("Year: "))
+    for movie in movie_list:
+        if movie[1] == year_find:
+            print(movie[0], "was released in", movie[1])
+          
+        
 def main():
     movie_list = [["Monty Python and the Holy Grail", 1975, 9.99],
                   ["On the Waterfront", 1954, 12.30],
@@ -53,6 +60,8 @@ def main():
             add(movie_list)
         elif command == "del":
             delete(movie_list)
+        elif command == "find":
+            find(movie_list)
         elif command == "exit":
             break
         else:
