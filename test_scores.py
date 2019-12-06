@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import statistics
 def display_welcome():
     print("The Test Scores program")
     print("Enter 'x' to exit")
@@ -25,7 +25,7 @@ def process_scores(scores):
         total_scores += score # total_scores = total_scores + score
     average = total_scores / len(scores)
     median_index = len(scores) // 2
-    median = scores[median_index]
+    median = statistics.median(scores)
          
                 
     # format and display the result
